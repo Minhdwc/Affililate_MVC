@@ -1,0 +1,45 @@
+﻿.img_homepage {
+    filter: grayscale(100%) contrast(80%) brightness(90%);
+}
+.content-container {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    z-index: 2;
+}
+
+.dynamic-font {
+    font-size: calc(1.5rem + 1vw);
+}
+
+.dynamic-font-sm {
+    font-size: calc(0.5rem + 1vw);
+}
+
+@media (max-width: 768px) {
+    .content-container {
+        top: 35%;
+    }
+
+    .dynamic-font {
+        font-size: 2rem;
+    }
+
+    .dynamic-font-sm {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .content-container {
+        top: 30%;
+    }
+
+    .dynamic-font {
+        font-size: 1.75rem;
+    }
+
+    .dynamic-font-sm {
+        font-size: 1rem;
+    }
+}
