@@ -77,3 +77,9 @@ D:\HK8\DoAnThucTap\Affililate_Web\Affililate_Web\obj\Debug\Affililate_Web.csproj
 D:\HK8\DoAnThucTap\Affililate_Web\Affililate_Web\obj\Debug\Affilila.8EB0D05E.Up2Date
 D:\HK8\DoAnThucTap\Affililate_Web\Affililate_Web\obj\Debug\Affililate_Web.dll
 D:\HK8\DoAnThucTap\Affililate_Web\Affililate_Web\obj\Debug\Affililate_Web.pdb
+D:\HK8\DoAnThucTap\Affililate_Web\Affililate_Web\bin\CloudinaryDotNet.dll
+D:\HK8\DoAnThucTap\Affililate_Web\Affililate_Web\bin\EntityFramework.dll
+D:\HK8\DoAnThucTap\Affililate_Web\Affililate_Web\bin\EntityFramework.SqlServer.dll
+D:\HK8\DoAnThucTap\Affililate_Web\Affililate_Web\bin\CloudinaryDotNet.xml
+D:\HK8\DoAnThucTap\Affililate_Web\Affililate_Web\bin\EntityFramework.xml
+D:\HK8\DoAnThucTap\Affililate_Web\Affililate_Web\bin\EntityFramework.SqlServer.xml

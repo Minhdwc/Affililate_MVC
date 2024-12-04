@@ -3,13 +3,12 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@model IEnumerable<Affililate_Web.Models.Product>
 <link href="~/css/home.css" rel="stylesheet" />
 
 <div class="container">
     <div class="container-fluid position-relative vh-100">
-        <div class="position-relative w-100 h-100">
-            <img src="~/Assets/img_homepage.jpg" alt="Homepage Background" class="img-fluid h-100 w-100 shadow img_homepage"
-                 style="object-fit: cover" />
+        <div class="position-relative w-100 h-100 bg-image">
         </div>
         <div class="position-absolute text-center content-container d-flex flex-column justify-content-center align-items-center">
             <h1 class="text-warning fw-bold text-uppercase dynamic-font">
@@ -26,5 +25,8 @@
                 lobortis.
             </p>
         </div>
+    </div>
+    <div class="pt-5">
+        <h1 class="text-warning fw-bold text-uppercase dynamic-font text-center">TOP PRODUCT</h1>
     </div>
 </div>

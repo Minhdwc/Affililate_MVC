@@ -3,20 +3,23 @@
   "WorkspaceRootPath": "D:\\HK8\\DoAnThucTap\\Affililate_Web\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{111DE7E8-C4AB-4565-B4A1-F1BE25FBA562}|Affililate_Web\\Affililate_Web.csproj|d:\\hk8\\doanthuctap\\affililate_web\\affililate_web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{111DE7E8-C4AB-4565-B4A1-F1BE25FBA562}|Affililate_Web\\Affililate_Web.csproj|solutionrelative:affililate_web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{111DE7E8-C4AB-4565-B4A1-F1BE25FBA562}|Affililate_Web\\Affililate_Web.csproj|d:\\hk8\\doanthuctap\\affililate_web\\affililate_web\\css\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{111DE7E8-C4AB-4565-B4A1-F1BE25FBA562}|Affililate_Web\\Affililate_Web.csproj|solutionrelative:affililate_web\\css\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/MINHDUC/db_affiliate_web/True/SqlTable/dbo.Products.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{111DE7E8-C4AB-4565-B4A1-F1BE25FBA562}|Affililate_Web\\Affililate_Web.csproj|d:\\hk8\\doanthuctap\\affililate_web\\affililate_web\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{111DE7E8-C4AB-4565-B4A1-F1BE25FBA562}|Affililate_Web\\Affililate_Web.csproj|solutionrelative:affililate_web\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{111DE7E8-C4AB-4565-B4A1-F1BE25FBA562}|Affililate_Web\\Affililate_Web.csproj|d:\\hk8\\doanthuctap\\affililate_web\\affililate_web\\css\\main.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{111DE7E8-C4AB-4565-B4A1-F1BE25FBA562}|Affililate_Web\\Affililate_Web.csproj|solutionrelative:affililate_web\\css\\main.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{111DE7E8-C4AB-4565-B4A1-F1BE25FBA562}|Affililate_Web\\Affililate_Web.csproj|d:\\hk8\\doanthuctap\\affililate_web\\affililate_web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{111DE7E8-C4AB-4565-B4A1-F1BE25FBA562}|Affililate_Web\\Affililate_Web.csproj|solutionrelative:affililate_web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{111DE7E8-C4AB-4565-B4A1-F1BE25FBA562}|Affililate_Web\\Affililate_Web.csproj|d:\\hk8\\doanthuctap\\affililate_web\\affililate_web\\models\\modelweb.context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{111DE7E8-C4AB-4565-B4A1-F1BE25FBA562}|Affililate_Web\\Affililate_Web.csproj|solutionrelative:affililate_web\\models\\modelweb.context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{111DE7E8-C4AB-4565-B4A1-F1BE25FBA562}|Affililate_Web\\Affililate_Web.csproj|D:\\HK8\\DoAnThucTap\\Affililate_Web\\affililate_web\\css\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{111DE7E8-C4AB-4565-B4A1-F1BE25FBA562}|Affililate_Web\\Affililate_Web.csproj|solutionrelative:affililate_web\\css\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,53 +42,63 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "dbo.Products [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/MINHDUC/db_affiliate_web/True/SqlTable/dbo.Products.sql",
+              "ToolTip": "dbo.Products [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-12-04T19:02:31.871Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ModelWeb.Context.cs",
+              "DocumentMoniker": "D:\\HK8\\DoAnThucTap\\Affililate_Web\\Affililate_Web\\Models\\ModelWeb.Context.cs",
+              "RelativeDocumentMoniker": "Affililate_Web\\Models\\ModelWeb.Context.cs",
+              "ToolTip": "D:\\HK8\\DoAnThucTap\\Affililate_Web\\Affililate_Web\\Models\\ModelWeb.Context.cs",
+              "RelativeToolTip": "Affililate_Web\\Models\\ModelWeb.Context.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAwwCEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T18:51:24.187Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\HK8\\DoAnThucTap\\Affililate_Web\\Affililate_Web\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Affililate_Web\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\HK8\\DoAnThucTap\\Affililate_Web\\Affililate_Web\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Affililate_Web\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAWwCAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-04T18:26:21.877Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\HK8\\DoAnThucTap\\Affililate_Web\\Affililate_Web\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Affililate_Web\\Controllers\\HomeController.cs",
               "ToolTip": "D:\\HK8\\DoAnThucTap\\Affililate_Web\\Affililate_Web\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Affililate_Web\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-03T18:22:00.257Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "home.css",
               "DocumentMoniker": "D:\\HK8\\DoAnThucTap\\Affililate_Web\\Affililate_Web\\css\\home.css",
               "RelativeDocumentMoniker": "Affililate_Web\\css\\home.css",
               "ToolTip": "D:\\HK8\\DoAnThucTap\\Affililate_Web\\Affililate_Web\\css\\home.css",
               "RelativeToolTip": "Affililate_Web\\css\\home.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-12-03T18:18:58.512Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\HK8\\DoAnThucTap\\Affililate_Web\\Affililate_Web\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Affililate_Web\\Views\\Home\\Index.cshtml",
-              "ToolTip": "D:\\HK8\\DoAnThucTap\\Affililate_Web\\Affililate_Web\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Affililate_Web\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAmwAMAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-03T17:35:19.855Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "main.css",
-              "DocumentMoniker": "D:\\HK8\\DoAnThucTap\\Affililate_Web\\Affililate_Web\\css\\main.css",
-              "RelativeDocumentMoniker": "Affililate_Web\\css\\main.css",
-              "ToolTip": "D:\\HK8\\DoAnThucTap\\Affililate_Web\\Affililate_Web\\css\\main.css",
-              "RelativeToolTip": "Affililate_Web\\css\\main.css",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAqwFYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-03T17:05:39.743Z",
               "EditorCaption": ""
             }
           ]

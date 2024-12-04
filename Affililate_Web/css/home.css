@@ -1,5 +1,9 @@
-﻿.img_homepage {
-    filter: grayscale(100%) contrast(80%) brightness(90%);
+﻿.bg-image {
+    background-image: url("../Assets/img_homepage.jpg");
+    filter: grayscale(1000%) contrast(70%) brightness(60%) blur(10px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .content-container {
     top: 50%;
