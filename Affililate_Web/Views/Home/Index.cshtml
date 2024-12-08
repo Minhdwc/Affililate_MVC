@@ -1,32 +1,245 @@
-﻿
-@{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
-@model IEnumerable<Affililate_Web.Models.Product>
-<link href="~/css/home.css" rel="stylesheet" />
+﻿<div>
+    @{
+        ViewBag.Title = "Index";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+    @model List<Affililate_Web.Models.Product>
+    @{
+        List<Affililate_Web.Models.Product> lstPro = Model.Take(8).ToList();
+        List<Affililate_Web.Models.Product> topView = Model.Take(4).ToList();
+    }
+    <link href="~/css/home.css" rel="stylesheet" />
+    <div class="container-fluid p-0">
+        <div class=" position-relative">
+            <div class="bg-image">
+            </div>
+            <div class=" content-container position-absolute" style="margin:auto">
+                <h1 class="text-warning fw-bold text-uppercase dynamic-font">
+                    Friendliness<br />and accessibility
+                </h1>
+                <h2 class="text-white fw-bold text-uppercase mt-2 dynamic-font-sm">
+                    Are our core values.
+                </h2>
+                <p class="text-white fs-5 mt-3 px-3 dynamic-font-sm" style="max-width: 800px; margin: 0 auto;">
+                    Gorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                    vulputate libero et velit interdum, ac aliquet odio mattis. Class
+                    aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                    inceptos himenaeos. Curabitur tempus urna at turpis condimentum
+                    lobortis.
+                </p>
+            </div>
+        </div>
+        <div class="py-5">
+            <h1 class="text-warning fw-bold text-uppercase dynamic-font text-center">TOP PRODUCT</h1>
+        </div>
+        <div class="blockContent">
+            <div class="swiper recipeSwiper">
+                <div class="swiper-wrapper">
+                    @foreach (var product in lstPro)
+                    {
+                        <div class="swiper-slide">
+                            <div class="d-flex justify-content-center">
+                                <div style="position: relative; width: 100%; max-width: 300px;">
+                                    <img src="@product.image_product" style="max-width: 100%; border-radius: 30px;" alt="@product.product_name">
+                                    <div class="position-absolute bottom-0 left-0 w-100 p-3" style="background-color: rgba(0, 0, 0, 0.7); color: white;">
+                                        <h5 class="mb-1">@product.product_name</h5>
+                                        <p class="mb-0">@(product.description.Length > 35 ? product.description.Substring(0, 28) + "..." : product.description)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="welcome-container">
+            <div class="scrolling-content">
+                <span class="m-1">
+                    <h1 class="text-warning fw-bold text-uppercase dynamic-font">WELCOME TO WEBSITE TOP PRODUCTS</h1>
+                    <img src="~/Assets/asterisk.png" alt="asterisk" class="asterisk-icon" />
+                </span>
+                <span class="m-1">
+                    <h1 class="text-warning fw-bold text-uppercase dynamic-font">WELCOME TO WEBSITE TOP PRODUCTS</h1>
+                    <img src="~/Assets/asterisk.png" alt="asterisk" class="asterisk-icon" />
+                </span>
+                <span class="m-1">
+                    <h1 class="text-warning fw-bold text-uppercase dynamic-font">WELCOME TO WEBSITE TOP PRODUCTS</h1>
+                    <img src="~/Assets/asterisk.png" alt="asterisk" class="asterisk-icon" />
+                </span>
+                <span class="m-1">
+                    <h1 class="text-warning fw-bold text-uppercase dynamic-font">WELCOME TO WEBSITE TOP PRODUCTS</h1>
+                    <img src="~/Assets/asterisk.png" alt="asterisk" class="asterisk-icon" />
+                </span>
+            </div>
+        </div>
+        <div class="TopView">
+            <h1 class="text-warning fw-bold text-uppercase dynamic-font text-center">TOP VIEW</h1>
+            <div class="container">
+                <div class="row">
+                    @for (int i = 0; i < topView.Count; i++)
+                    {
+                        <div class="col-6 col-md-3">
+                            <div class="position-relative" style="width: 80%;">
+                                <div class="card border-0 bg-black pb-2">
+                                    <div>
+                                        <img src="@topView[i].image_product"
+                                             class="card-img-top rounded-pill object-fit-cover"
+                                             style="aspect-ratio: 1/1; height: 300px; width: 150px; margin: auto;display:flex" alt="Product Image">
+                                    </div>
+                                    <div class="position-absolute translate-middle-x d-flex justify-content-center align-items-center"
+                                         style="width: 40px; height: 40px; background: #fff; border-radius: 50%; bottom: -10px; left: 50%; border: 5px solid #000;">
+                                        <span class="fw-bold">@(i+1)</span>
+                                    </div>
+                                </div>
+                                <p class="text-white text-start pt-3">@topView[i].description</p>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="container bg-white whyChooseUs">
+            <div class="choose-us d-flex align-items-center justify-content-center">
+                <img src="~/Assets/asterisk.png" alt="Asterisk Icon">
+                <h1 class="fw-bold dynamic-font text-black m-0">WHY CHOOSE US ?</h1>
+                <img src="~/Assets/asterisk.png" alt="Asterisk Icon">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-12 border-right my-2">
+                        <h1 class="fw-bold">1.</h1>
+                        <h6 class="dynamic-font-sm m-2">Sorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</h6>
+                    </div>
+                    <div class="col-md-4 col-sm-12 border-right my-2">
+                        <h1 class="fw-bold">2.</h1>
+                        <h6 class="dynamic-font-sm m-2">Sorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</h6>
+                    </div>
+                    <div class="col-md-4 col-sm-12 my-2">
+                        <h1 class="fw-bold">3.</h1>
+                        <h6 class="dynamic-font-sm m-2">Sorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h1 class="text-warning fw-bold dynamic-font text-center">FQAs</h1>
+            <div class="container">
+                <div class="faq-container">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="faq-header">What is affiliate e-commerce site?</div>
+                        <div class="faq-arrow" data-bs-toggle="collapse" data-bs-target="#faq-content-1" aria-expanded="false">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-divider"></div>
+                    <div id="faq-content-1" class="collapse">
+                        <p>
+                            In the world of e-commerce, there’s a way to earn money by promoting products without running your
+                            own online store. It’s called affiliate marketing, and for e-commerce sites, it’s a powerful tool to
+                            expand reach. As an affiliate, you’d partner with an e-commerce site, like a clothing store or a
+                            tech gadget retailer. You’d then recommend their products through your website, social media
+                            channels, or even videos.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-container">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="faq-header">Do you know Amazon.com?</div>
+                        <div class="faq-arrow" data-bs-toggle="collapse" data-bs-target="#faq-content-2" aria-expanded="false">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-divider"></div>
+                    <div id="faq-content-2" class="collapse">
+                        <p>
+                            In the world of e-commerce, there’s a way to earn money by promoting products without running your
+                            own online store. It’s called affiliate marketing, and for e-commerce sites, it’s a powerful tool to
+                            expand reach. As an affiliate, you’d partner with an e-commerce site, like a clothing store or a
+                            tech gadget retailer. You’d then recommend their products through your website, social media
+                            channels, or even videos.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-container">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="faq-header">Who is Shopee?</div>
+                        <div class="faq-arrow" data-bs-toggle="collapse" data-bs-target="#faq-content-3" aria-expanded="false">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-divider"></div>
+                    <div id="faq-content-3" class="collapse">
+                        <p>
+                            In the world of e-commerce, there’s a way to earn money by promoting products without running your
+                            own online store. It’s called affiliate marketing, and for e-commerce sites, it’s a powerful tool to
+                            expand reach. As an affiliate, you’d partner with an e-commerce site, like a clothing store or a
+                            tech gadget retailer. You’d then recommend their products through your website, social media
+                            channels, or even videos.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-container">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="faq-header">How to begin to Affiliate with Amazon?</div>
+                        <div class="faq-arrow" data-bs-toggle="collapse" data-bs-target="#faq-content-4" aria-expanded="false">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-divider"></div>
+                    <div id="faq-content-4" class="collapse">
+                        <p>
+                            In the world of e-commerce, there’s a way to earn money by promoting products without running your
+                            own online store. It’s called affiliate marketing, and for e-commerce sites, it’s a powerful tool to
+                            expand reach. As an affiliate, you’d partner with an e-commerce site, like a clothing store or a
+                            tech gadget retailer. You’d then recommend their products through your website, social media
+                            channels, or even videos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<div class="container">
-    <div class="container-fluid position-relative vh-100">
-        <div class="position-relative w-100 h-100 bg-image">
-        </div>
-        <div class="position-absolute text-center content-container d-flex flex-column justify-content-center align-items-center">
-            <h1 class="text-warning fw-bold text-uppercase dynamic-font">
-                Friendliness<br />and accessibility
-            </h1>
-            <h2 class="text-white fw-bold text-uppercase mt-2 dynamic-font-sm">
-                Are our core values.
-            </h2>
-            <p class="text-white fs-5 mt-3 px-3 dynamic-font-sm" style="max-width: 800px">
-                Gorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                vulputate libero et velit interdum, ac aliquet odio mattis. Class
-                aptent taciti sociosqu ad litora torquent per conubia nostra, per
-                inceptos himenaeos. Curabitur tempus urna at turpis condimentum
-                lobortis.
-            </p>
-        </div>
     </div>
-    <div class="pt-5">
-        <h1 class="text-warning fw-bold text-uppercase dynamic-font text-center">TOP PRODUCT</h1>
-    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var swiper = new Swiper('.recipeSwiper', {
+                slidesPerView: 'auto',
+                spaceBetween: 15,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                    },
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 30
+                    },
+                    1024: {
+                        slidesPerView: 4,
+                        spaceBetween: 40
+                    }
+                }
+            });
+        });
+    </script>
+    <script>
+        const faqArrows = document.querySelectorAll('.faq-arrow');
+
+        faqArrows.forEach(arrow => {
+            const target = document.querySelector(arrow.getAttribute('data-bs-target'));
+
+            target.addEventListener('show.bs.collapse', () => {
+                arrow.innerHTML = '<i class="fas fa-chevron-up"></i>'; // Thay đổi thành mũi tên lên
+            });
+
+            target.addEventListener('hide.bs.collapse', () => {
+                arrow.innerHTML = '<i class="fas fa-chevron-down"></i>'; // Thay đổi thành mũi tên xuống
+            });
+        });
+    </script>
+
 </div>

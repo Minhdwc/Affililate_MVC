@@ -28,6 +28,9 @@
     <Property Name="id_product" Type="Int32" Nullable="false" />
     <Property Name="click_time" Type="DateTime" Precision="3" />
     <NavigationProperty Name="Product" Relationship="Self.FK__Product_C__id_pr__5441852A" FromRole="Product_Click" ToRole="Products" />
+    <Property Name="event_type" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="commission" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="user_ip" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="Product">
     <Key>
@@ -42,6 +45,7 @@
     <Property Name="commission_rate" Type="Double" />
     <NavigationProperty Name="Category" Relationship="Self.FK__Products__id_cat__5070F446" FromRole="Products" ToRole="Category" />
     <NavigationProperty Name="Product_Click" Relationship="Self.FK__Product_C__id_pr__5441852A" FromRole="Products" ToRole="Product_Click" />
+    <Property Name="image_product" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
   </EntityType>
   <Association Name="FK__Products__id_cat__5070F446">
     <End Role="Category" Type="Self.Category" Multiplicity="1" />

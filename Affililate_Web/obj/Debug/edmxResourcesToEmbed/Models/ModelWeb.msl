@@ -25,6 +25,9 @@
     <EntitySetMapping Name="Product_Click">
       <EntityTypeMapping TypeName="db_affiliate_webModel.Product_Click">
         <MappingFragment StoreEntitySet="Product_Click">
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="commission" ColumnName="commission" />
+          <ScalarProperty Name="event_type" ColumnName="event_type" />
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="id_product" ColumnName="id_product" />
           <ScalarProperty Name="click_time" ColumnName="click_time" />
@@ -34,6 +37,7 @@
     <EntitySetMapping Name="Products">
       <EntityTypeMapping TypeName="db_affiliate_webModel.Product">
         <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="image_product" ColumnName="image_product" />
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="product_name" ColumnName="product_name" />
           <ScalarProperty Name="price" ColumnName="price" />

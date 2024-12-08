@@ -8,8 +8,8 @@
     <link href="~/Content/bootstrap.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
        <link rel="stylesheet" href="~/css/main.css"/>
-    @*@Styles.Render("~/Content/css")
-        @Scripts.Render("~/bundles/modernizr")*@
+       <link rel="stylesheet"
+             href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 </head>
 <body class="">
@@ -26,17 +26,17 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
                 <ul class="navbar-nav text-center d-flex align-items-center menu-container">
                     <li class="nav-item">
-                        <a class="nav-link active rounded-pill menu-item menu-item-active" href="#">
+                        <a class="nav-link rounded-pill menu-item menu-item-active" href="#" onclick="setActive(this)">
                             Home
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link rounded-pill menu-item" href="#"> Product </a>
+                        <a class="nav-link rounded-pill menu-item" href="#" onclick="setActive(this)"> Product </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link rounded-pill menu-item" href="#"> Profile </a>
+                        <a class="nav-link rounded-pill menu-item" href="#" onclick="setActive(this)"> Profile </a>
                     </li>
                     <div class="search-container">
                         <input type="text" placeholder="Search product" class="input-search hidden" />
@@ -81,8 +81,14 @@
     @RenderSection("scripts", required: false)
 
     <script src="~/path/to/fontawesome.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
+        function setActive(clickedItem) {
+            document.querySelectorAll('.menu-item').forEach(item => {
+                item.classList.remove('menu-item-active');
+            });
+            clickedItem.classList.add('menu-item-active');
+        }
         function toggleSearch() {
             const searchInput = document.querySelector(".input-search");
             const menuContainer = document.querySelector(".menu-container");

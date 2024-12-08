@@ -26,6 +26,9 @@
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="id_product" Type="int" Nullable="false" />
     <Property Name="click_time" Type="datetime" />
+    <Property Name="event_type" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="commission" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="user_ip" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="Products">
     <Key>
@@ -38,6 +41,7 @@
     <Property Name="id_category" Type="int" Nullable="false" />
     <Property Name="affiliate_link" Type="nvarchar" MaxLength="2083" />
     <Property Name="commission_rate" Type="float" />
+    <Property Name="image_product" Type="nvarchar" MaxLength="255" />
   </EntityType>
   <Association Name="FK__Product_C__id_pr__5441852A">
     <End Role="Products" Type="Self.Products" Multiplicity="1" />

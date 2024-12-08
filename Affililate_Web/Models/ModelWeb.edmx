@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="db_affiliate_webModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="db_affiliate_webModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Admin">
           <Key>
             <PropertyRef Name="id" />
@@ -31,6 +31,9 @@
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="id_product" Type="int" Nullable="false" />
           <Property Name="click_time" Type="datetime" />
+          <Property Name="event_type" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="commission" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="user_ip" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Products">
           <Key>
@@ -43,6 +46,7 @@
           <Property Name="id_category" Type="int" Nullable="false" />
           <Property Name="affiliate_link" Type="nvarchar" MaxLength="2083" />
           <Property Name="commission_rate" Type="float" />
+          <Property Name="image_product" Type="nvarchar" MaxLength="255" />
         </EntityType>
         <Association Name="FK__Product_C__id_pr__5441852A">
           <End Role="Products" Type="Self.Products" Multiplicity="1" />
@@ -82,8 +86,7 @@
             <End Role="Products" EntitySet="Products" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="db_affiliate_webModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -115,6 +118,9 @@
           <Property Name="id_product" Type="Int32" Nullable="false" />
           <Property Name="click_time" Type="DateTime" Precision="3" />
           <NavigationProperty Name="Product" Relationship="Self.FK__Product_C__id_pr__5441852A" FromRole="Product_Click" ToRole="Products" />
+          <Property Name="event_type" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="commission" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="user_ip" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Product">
           <Key>
@@ -129,6 +135,7 @@
           <Property Name="commission_rate" Type="Double" />
           <NavigationProperty Name="Category" Relationship="Self.FK__Products__id_cat__5070F446" FromRole="Products" ToRole="Category" />
           <NavigationProperty Name="Product_Click" Relationship="Self.FK__Product_C__id_pr__5441852A" FromRole="Products" ToRole="Product_Click" />
+          <Property Name="image_product" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
         </EntityType>
         <Association Name="FK__Products__id_cat__5070F446">
           <End Role="Category" Type="Self.Category" Multiplicity="1" />
@@ -198,6 +205,9 @@
           <EntitySetMapping Name="Product_Click">
             <EntityTypeMapping TypeName="db_affiliate_webModel.Product_Click">
               <MappingFragment StoreEntitySet="Product_Click">
+                <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+                <ScalarProperty Name="commission" ColumnName="commission" />
+                <ScalarProperty Name="event_type" ColumnName="event_type" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="id_product" ColumnName="id_product" />
                 <ScalarProperty Name="click_time" ColumnName="click_time" />
@@ -207,6 +217,7 @@
           <EntitySetMapping Name="Products">
             <EntityTypeMapping TypeName="db_affiliate_webModel.Product">
               <MappingFragment StoreEntitySet="Products">
+                <ScalarProperty Name="image_product" ColumnName="image_product" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="product_name" ColumnName="product_name" />
                 <ScalarProperty Name="price" ColumnName="price" />

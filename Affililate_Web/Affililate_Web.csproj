@@ -213,6 +213,7 @@
     <Content Include="App_Data\EFDatabase_log.ldf">
       <DependentUpon>EFDatabase.mdf</DependentUpon>
     </Content>
+    <Content Include="Assets\asterisk.png" />
     <Content Include="Assets\balo.jpg" />
     <Content Include="Assets\bop.jpg" />
     <Content Include="Assets\Desjardins.jpg" />
