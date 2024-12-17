@@ -1,0 +1,151 @@
+﻿@model Affililate_Web.Models.Product
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/css/detail.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12 d-flex justify-content-center">
+            <div class="w-100 p-4 text-center">
+                <img src="@Model.image_product" alt="Alternate Text" class="img-fluid" style="max-height: 500px; object-fit: cover; border-radius: 20px;" />
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12 py-3">
+            <h1 class="text-warning fw-bold text-uppercase dynamic-font">@Model.product_name</h1>
+            <br />
+            <h2 class="text-warning fw-bold text-uppercase dynamic-font">@Model.price.ToString("N0")₫</h2>
+            <br />
+            <h4 class="text-white">Description</h4>
+            <h6 class="text-white">@Model.description</h6>
+            <a href="@Model.affiliate_link" onclick="clickProduct(@Model.id, 'buy')" class="btn btn-lg mt-3 px-5" style="background-color: #fff; border-radius:25px">Buy Now</a>
+        </div>
+        <div class="row p-4">
+            <div class="d-flex align-items-center">
+                <div class="bg-warning px-3 py-1">
+                    <h6 class="text-black fw-bold text-uppercase dynamic-font m-0">@ViewBag.counClick view</h6>
+                </div>
+                <h6 class="text-white fw-bold text-uppercase dynamic-font ms-3 m-0">
+                    @DateTime.Now.ToString("dd/MM/yyyy ddd", System.Globalization.CultureInfo.InvariantCulture)
+                </h6>
+            </div>
+        </div>
+        <div class="row p-4">
+            <div class="d-flex align-items-center col-12">
+                <div class="bg-warning px-3 py-1">
+                    <h6 class="text-black fw-bold text-uppercase dynamic-font m-0">@ViewBag.countBuy buy</h6>
+                </div>
+                <h6 class="text-white fw-bold text-uppercase dynamic-font ms-3 m-0">
+                    @DateTime.Now.ToString("dd/MM/yyyy ddd", System.Globalization.CultureInfo.InvariantCulture)
+                </h6>
+            </div>
+        </div>
+        <div class="p-4 col-md-4 col-sm-12">
+            <h6 class="text-white mb-3">FEATURES</h6>
+
+            <div class="row">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h6 class="text-white">Category</h6>
+                    <h6 class="text-white">@Model.Category.name</h6>
+                </div>
+                <hr class="text-white w-100 m-0 pt-1">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h6 class="text-white">Date First Available</h6>
+                    <h6 class="text-white">@($"{Model.created_at:dd/MM/yyyy}")</h6>
+                </div>
+                <hr class="text-white w-100 m-0">
+            </div>
+        </div>
+
+        <!-- Swiper Container -->
+        <div class="container mt-4">
+            <h4 class="text-white mb-3">Related Products</h4>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    @foreach (var product in ViewBag.randomProduct)
+                    {
+                        <div class="swiper-slide">
+                            <div class="row w-100 h-100">
+                                <!-- Image -->
+                                <div class="col-4">
+                                    <img src="@product.image_product" class="img-fluid" style="max-height: 200px; object-fit: cover; border-radius: 10px;" alt="@product.product_name">
+                                </div>
+                                <!-- Text content -->
+                                <div class="col-8">
+                                    <h6 class="text-white font-weight-bold">@product.product_name</h6>
+                                    <p class="text-white">@product.description</p>
+                                    <h5 class="text-warning">@product.price.ToString("N0")₫</h5>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+
+                <!-- Navigation buttons -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<script>
+    function clickProduct(productId, type) {
+        $.ajax({
+            url: '@Url.Action("Click", "Product")',
+            type: 'POST',
+            data: {
+                productId: productId,
+                type: type
+            },
+            success: function (response) {
+                if (response.success) {
+                    console.log("Bought")
+                } else {
+                    console.error("Error: " + response.message)
+                }
+            },
+            error: function () {
+                console.log("Failed")
+            }
+        })
+    }
+</script>
+<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var swiper = new Swiper('.mySwiper', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                }
+            }
+        });
+    }); 
+</script>

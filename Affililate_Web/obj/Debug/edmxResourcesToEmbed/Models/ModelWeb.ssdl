@@ -27,7 +27,6 @@
     <Property Name="id_product" Type="int" Nullable="false" />
     <Property Name="click_time" Type="datetime" />
     <Property Name="event_type" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="commission" Type="decimal" Precision="10" Scale="2" />
     <Property Name="user_ip" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="Products">
@@ -40,10 +39,21 @@
     <Property Name="description" Type="nvarchar" MaxLength="255" />
     <Property Name="id_category" Type="int" Nullable="false" />
     <Property Name="affiliate_link" Type="nvarchar" MaxLength="2083" />
-    <Property Name="commission_rate" Type="float" />
+    <Property Name="commission" Type="float" />
     <Property Name="image_product" Type="nvarchar" MaxLength="255" />
+    <Property Name="created_at" Type="date" />
   </EntityType>
-  <Association Name="FK__Product_C__id_pr__5441852A">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK__Product_C__id_pr__4222D4EF">
     <End Role="Products" Type="Self.Products" Multiplicity="1" />
     <End Role="Product_Click" Type="Self.Product_Click" Multiplicity="*" />
     <ReferentialConstraint>
@@ -55,7 +65,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Products__id_cat__5070F446">
+  <Association Name="FK__Products__id_cat__4316F928">
     <End Role="Category" Type="Self.Category" Multiplicity="1" />
     <End Role="Products" Type="Self.Products" Multiplicity="*" />
     <ReferentialConstraint>
@@ -72,11 +82,12 @@
     <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Product_Click" EntityType="Self.Product_Click" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK__Product_C__id_pr__5441852A" Association="Self.FK__Product_C__id_pr__5441852A">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Product_C__id_pr__4222D4EF" Association="Self.FK__Product_C__id_pr__4222D4EF">
       <End Role="Products" EntitySet="Products" />
       <End Role="Product_Click" EntitySet="Product_Click" />
     </AssociationSet>
-    <AssociationSet Name="FK__Products__id_cat__5070F446" Association="Self.FK__Products__id_cat__5070F446">
+    <AssociationSet Name="FK__Products__id_cat__4316F928" Association="Self.FK__Products__id_cat__4316F928">
       <End Role="Category" EntitySet="Category" />
       <End Role="Products" EntitySet="Products" />
     </AssociationSet>

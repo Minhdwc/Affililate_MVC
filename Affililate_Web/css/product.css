@@ -1,0 +1,112 @@
+﻿.product {
+    position: relative;
+    border-radius: 15%;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, filter 0.3s ease;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.item {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, filter 0.3s ease;
+    max-width: 500px;
+    margin: 0 auto;
+}
+.item:hover{
+    cursor: pointer;
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    transition: filter 0.3s ease;
+    object-fit: cover
+}
+.item-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px;
+    text-align: start;
+    max-height: 100px; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+
+
+.product img {
+    width: 100%;
+    height: auto;
+    transition: filter 0.3s ease;
+    object-fit:cover
+}
+
+.product-info {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: white;
+    padding: 10px;
+    text-align: start;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.product:hover .product-info {
+    display: block;
+    opacity: 1;
+}
+
+.product:hover img {
+    filter: brightness(60%);
+}
+
+.product-info h2 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.product-info p {
+    font-size: 0.8rem;
+}
+
+.product-info .price {
+    color: yellow;
+    font-weight: bold;
+}
+.pagination-container .pagination {
+    display: flex;
+    list-style: none;
+    gap: 0.5rem;
+}
+
+.pagination-container .pagination li {
+    border: 1px solid #ddd;
+    padding: 0.5rem 0.75rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.pagination-container .pagination li.active {
+    background-color: #28a745;
+    color: white;
+}
+
+.pagination-container .pagination li:hover {
+    background-color: #f8f9fa;  
+}
+
+.pagination li a {
+    text-decoration: none
+}

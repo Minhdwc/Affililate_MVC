@@ -26,8 +26,9 @@ namespace Affililate_Web.Models
         public string description { get; set; }
         public int id_category { get; set; }
         public string affiliate_link { get; set; }
-        public Nullable<double> commission_rate { get; set; }
         public string image_product { get; set; }
+        public Nullable<double> commission { get; set; }
+        public Nullable<System.DateTime> created_at { get; set; }
     
         public virtual Category Category { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

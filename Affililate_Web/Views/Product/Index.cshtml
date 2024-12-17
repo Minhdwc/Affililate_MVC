@@ -1,0 +1,83 @@
+﻿@using PagedList.Mvc;
+@using PagedList;
+@model IPagedList<Affililate_Web.Models.Product>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/css/product.css" rel="stylesheet" />
+<div class="py-3">
+    <h1 class="text-warning fw-bold text-uppercase dynamic-font text-center">TOP PRODUCT</h1>
+</div>
+<div class="container py-5">
+    <div class="row justify-content-center">
+        @foreach (var product in ViewBag.topBuy)
+        {
+            <div class="col-md-6 col-sm-12 py-3">
+                <div class="product" onclick="clickProduct(@product.id, 'click')">
+                    <img src="@product.image_product" alt="Alternate Text" />
+                    <div class="product-info">
+                        <h2>
+                            <span class="price">@product.price.ToString("N0")₫</span>
+                            <br />
+                            <span style="font-weight: bold">@product.product_name</span>
+                        </h2>
+                        <p>@product.description</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<div class="py-3">
+    <h1 class="text-warning fw-bold text-uppercase dynamic-font text-center">TOP PRODUCT</h1>
+</div>
+<div class="container py-5">
+    <div class="row">
+        @foreach(var product in Model)
+            {
+                <div class="col-md-3 col-sm-6 py-3">
+                    <div class="item" onclick="clickProduct(@product.id, 'click')">
+                        <img src="@product.image_product" alt="Alternate Text" />
+                        <div class="item-info d-flex justify-content-between">
+                            <h6>
+                                @product.price.ToString("N0")₫
+                                <br />
+                                @product.product_name
+                            </h6>
+                            <a onclick="clickProduct(@product.id, 'buy')" class="btn btn-success">Buy</a>
+                        </div>
+                    </div>
+                </div>
+            }
+    </div>
+    <div class="pagination-container d-flex justify-content-center mt-4">
+        @Html.PagedListPager(Model, page => Url.Action("Index", new { page, pageSize = Model.PageSize }))
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js">
+</script>
+<script>
+    function clickProduct(productId, type) {
+        $.ajax({
+            url: '@Url.Action("Click", "Product")',
+            type: 'POST',
+            data: {
+                productId: productId,
+                type: type
+            },
+            success: function (response) {
+                if (response.success) {
+                    if (type === 'click') {
+                        window.location.href = `/Product/detail/${productId}`
+                    }
+                } else {
+                    console.error("Error: "+ response.message)
+                }
+            },
+            error: function () {
+                console.log("Failed")
+            }
+        })
+    }
+</script>

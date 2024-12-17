@@ -32,7 +32,6 @@
           <Property Name="id_product" Type="int" Nullable="false" />
           <Property Name="click_time" Type="datetime" />
           <Property Name="event_type" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="commission" Type="decimal" Precision="10" Scale="2" />
           <Property Name="user_ip" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Products">
@@ -45,10 +44,21 @@
           <Property Name="description" Type="nvarchar" MaxLength="255" />
           <Property Name="id_category" Type="int" Nullable="false" />
           <Property Name="affiliate_link" Type="nvarchar" MaxLength="2083" />
-          <Property Name="commission_rate" Type="float" />
+          <Property Name="commission" Type="float" />
           <Property Name="image_product" Type="nvarchar" MaxLength="255" />
+          <Property Name="created_at" Type="date" />
         </EntityType>
-        <Association Name="FK__Product_C__id_pr__5441852A">
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <Association Name="FK__Product_C__id_pr__4222D4EF">
           <End Role="Products" Type="Self.Products" Multiplicity="1" />
           <End Role="Product_Click" Type="Self.Product_Click" Multiplicity="*" />
           <ReferentialConstraint>
@@ -60,7 +70,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Products__id_cat__5070F446">
+        <Association Name="FK__Products__id_cat__4316F928">
           <End Role="Category" Type="Self.Category" Multiplicity="1" />
           <End Role="Products" Type="Self.Products" Multiplicity="*" />
           <ReferentialConstraint>
@@ -77,11 +87,12 @@
           <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Product_Click" EntityType="Self.Product_Click" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__Product_C__id_pr__5441852A" Association="Self.FK__Product_C__id_pr__5441852A">
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Product_C__id_pr__4222D4EF" Association="Self.FK__Product_C__id_pr__4222D4EF">
             <End Role="Products" EntitySet="Products" />
             <End Role="Product_Click" EntitySet="Product_Click" />
           </AssociationSet>
-          <AssociationSet Name="FK__Products__id_cat__5070F446" Association="Self.FK__Products__id_cat__5070F446">
+          <AssociationSet Name="FK__Products__id_cat__4316F928" Association="Self.FK__Products__id_cat__4316F928">
             <End Role="Category" EntitySet="Category" />
             <End Role="Products" EntitySet="Products" />
           </AssociationSet>
@@ -119,7 +130,6 @@
           <Property Name="click_time" Type="DateTime" Precision="3" />
           <NavigationProperty Name="Product" Relationship="Self.FK__Product_C__id_pr__5441852A" FromRole="Product_Click" ToRole="Products" />
           <Property Name="event_type" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="commission" Type="Decimal" Precision="10" Scale="2" />
           <Property Name="user_ip" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Product">
@@ -132,10 +142,11 @@
           <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="id_category" Type="Int32" Nullable="false" />
           <Property Name="affiliate_link" Type="String" MaxLength="2083" FixedLength="false" Unicode="true" />
-          <Property Name="commission_rate" Type="Double" />
           <NavigationProperty Name="Category" Relationship="Self.FK__Products__id_cat__5070F446" FromRole="Products" ToRole="Category" />
           <NavigationProperty Name="Product_Click" Relationship="Self.FK__Product_C__id_pr__5441852A" FromRole="Products" ToRole="Product_Click" />
           <Property Name="image_product" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="commission" Type="Double" />
+          <Property Name="created_at" Type="DateTime" Precision="0" />
         </EntityType>
         <Association Name="FK__Products__id_cat__5070F446">
           <End Role="Category" Type="Self.Category" Multiplicity="1" />
@@ -174,7 +185,18 @@
             <End Role="Products" EntitySet="Products" />
             <End Role="Product_Click" EntitySet="Product_Click" />
           </AssociationSet>
+          <EntitySet Name="sysdiagrams" EntityType="db_affiliate_webModel.sysdiagram" />
         </EntityContainer>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -206,7 +228,6 @@
             <EntityTypeMapping TypeName="db_affiliate_webModel.Product_Click">
               <MappingFragment StoreEntitySet="Product_Click">
                 <ScalarProperty Name="user_ip" ColumnName="user_ip" />
-                <ScalarProperty Name="commission" ColumnName="commission" />
                 <ScalarProperty Name="event_type" ColumnName="event_type" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="id_product" ColumnName="id_product" />
@@ -217,6 +238,8 @@
           <EntitySetMapping Name="Products">
             <EntityTypeMapping TypeName="db_affiliate_webModel.Product">
               <MappingFragment StoreEntitySet="Products">
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="commission" ColumnName="commission" />
                 <ScalarProperty Name="image_product" ColumnName="image_product" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="product_name" ColumnName="product_name" />
@@ -224,7 +247,17 @@
                 <ScalarProperty Name="description" ColumnName="description" />
                 <ScalarProperty Name="id_category" ColumnName="id_category" />
                 <ScalarProperty Name="affiliate_link" ColumnName="affiliate_link" />
-                <ScalarProperty Name="commission_rate" ColumnName="commission_rate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="db_affiliate_webModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

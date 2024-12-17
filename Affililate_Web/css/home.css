@@ -9,13 +9,7 @@
 }
 
 
-.dynamic-font {
-    font-size: calc(1.5rem + 1vw);
-}
 
-.dynamic-font-sm {
-    font-size: calc(0.5rem + 1vw);
-}
 
 .recipeSwiper .swiper-slide {
     width: auto;

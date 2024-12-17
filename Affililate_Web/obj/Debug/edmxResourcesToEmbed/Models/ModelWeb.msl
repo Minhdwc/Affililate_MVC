@@ -26,7 +26,6 @@
       <EntityTypeMapping TypeName="db_affiliate_webModel.Product_Click">
         <MappingFragment StoreEntitySet="Product_Click">
           <ScalarProperty Name="user_ip" ColumnName="user_ip" />
-          <ScalarProperty Name="commission" ColumnName="commission" />
           <ScalarProperty Name="event_type" ColumnName="event_type" />
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="id_product" ColumnName="id_product" />
@@ -37,6 +36,8 @@
     <EntitySetMapping Name="Products">
       <EntityTypeMapping TypeName="db_affiliate_webModel.Product">
         <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="commission" ColumnName="commission" />
           <ScalarProperty Name="image_product" ColumnName="image_product" />
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="product_name" ColumnName="product_name" />
@@ -44,7 +45,17 @@
           <ScalarProperty Name="description" ColumnName="description" />
           <ScalarProperty Name="id_category" ColumnName="id_category" />
           <ScalarProperty Name="affiliate_link" ColumnName="affiliate_link" />
-          <ScalarProperty Name="commission_rate" ColumnName="commission_rate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="db_affiliate_webModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

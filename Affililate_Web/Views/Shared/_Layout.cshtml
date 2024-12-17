@@ -26,17 +26,22 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
                 <ul class="navbar-nav text-center d-flex align-items-center menu-container">
                     <li class="nav-item">
-                        <a class="nav-link rounded-pill menu-item menu-item-active" href="#" onclick="setActive(this)">
+                        <a class="nav-link rounded-pill menu-item @(ViewContext.RouteData.Values["controller"].ToString() == "Home" ? "menu-item-active" : "")"
+                           href="@Url.Action("Index", "Home")">
                             Home
                         </a>
                     </li>
-
                     <li class="nav-item">
-                        <a class="nav-link rounded-pill menu-item" href="#" onclick="setActive(this)"> Product </a>
+                        <a class="nav-link rounded-pill menu-item @(ViewContext.RouteData.Values["controller"].ToString() == "Product" ? "menu-item-active" : "")"
+                           href="@Url.Action("Index", "Product")">
+                            Product
+                        </a>
                     </li>
-
                     <li class="nav-item">
-                        <a class="nav-link rounded-pill menu-item" href="#" onclick="setActive(this)"> Profile </a>
+                        <a class="nav-link rounded-pill menu-item @(ViewContext.RouteData.Values["controller"].ToString() == "Profile" ? "menu-item-active" : "")"
+                           href="@Url.Action("Index", "Profile")">
+                            Profile
+                        </a>
                     </li>
                     <div class="search-container">
                         <input type="text" placeholder="Search product" class="input-search hidden" />

@@ -3,11 +3,6 @@
         ViewBag.Title = "Index";
         Layout = "~/Views/Shared/_Layout.cshtml";
     }
-    @model List<Affililate_Web.Models.Product>
-    @{
-        List<Affililate_Web.Models.Product> lstPro = Model.Take(8).ToList();
-        List<Affililate_Web.Models.Product> topView = Model.Take(4).ToList();
-    }
     <link href="~/css/home.css" rel="stylesheet" />
     <div class="container-fluid p-0">
         <div class=" position-relative">
@@ -35,7 +30,7 @@
         <div class="blockContent">
             <div class="swiper recipeSwiper">
                 <div class="swiper-wrapper">
-                    @foreach (var product in lstPro)
+                    @foreach (var product in ViewBag.topBuy)
                     {
                         <div class="swiper-slide">
                             <div class="d-flex justify-content-center">
@@ -76,13 +71,13 @@
             <h1 class="text-warning fw-bold text-uppercase dynamic-font text-center">TOP VIEW</h1>
             <div class="container">
                 <div class="row">
-                    @for (int i = 0; i < topView.Count; i++)
+                    @for (int i = 0; i < ViewBag.topView.Count; i++)
                     {
                         <div class="col-6 col-md-3">
                             <div class="position-relative" style="width: 80%;">
                                 <div class="card border-0 bg-black pb-2">
                                     <div>
-                                        <img src="@topView[i].image_product"
+                                        <img src="@ViewBag.topView[i].image_product"
                                              class="card-img-top rounded-pill object-fit-cover"
                                              style="aspect-ratio: 1/1; height: 300px; width: 150px; margin: auto;display:flex" alt="Product Image">
                                     </div>
@@ -91,7 +86,7 @@
                                         <span class="fw-bold">@(i+1)</span>
                                     </div>
                                 </div>
-                                <p class="text-white text-start pt-3">@topView[i].description</p>
+                                <p class="text-white text-start pt-3">@ViewBag.topView[i].description</p>
                             </div>
                         </div>
                     }

@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "D:\\HK8\\DoAnThucTap\\Affililate_Web\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{111DE7E8-C4AB-4565-B4A1-F1BE25FBA562}|Affililate_Web\\Affililate_Web.csproj|d:\\hk8\\doanthuctap\\affililate_web\\affililate_web\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{111DE7E8-C4AB-4565-B4A1-F1BE25FBA562}|Affililate_Web\\Affililate_Web.csproj|solutionrelative:affililate_web\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{111DE7E8-C4AB-4565-B4A1-F1BE25FBA562}|Affililate_Web\\Affililate_Web.csproj|D:\\HK8\\DoAnThucTap\\Affililate_Web\\affililate_web\\views\\product\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{111DE7E8-C4AB-4565-B4A1-F1BE25FBA562}|Affililate_Web\\Affililate_Web.csproj|solutionrelative:affililate_web\\views\\product\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{111DE7E8-C4AB-4565-B4A1-F1BE25FBA562}|Affililate_Web\\Affililate_Web.csproj|D:\\HK8\\DoAnThucTap\\Affililate_Web\\affililate_web\\css\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{111DE7E8-C4AB-4565-B4A1-F1BE25FBA562}|Affililate_Web\\Affililate_Web.csproj|solutionrelative:affililate_web\\css\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{111DE7E8-C4AB-4565-B4A1-F1BE25FBA562}|Affililate_Web\\Affililate_Web.csproj|d:\\hk8\\doanthuctap\\affililate_web\\affililate_web\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{111DE7E8-C4AB-4565-B4A1-F1BE25FBA562}|Affililate_Web\\Affililate_Web.csproj|solutionrelative:affililate_web\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{111DE7E8-C4AB-4565-B4A1-F1BE25FBA562}|Affililate_Web\\Affililate_Web.csproj|D:\\HK8\\DoAnThucTap\\Affililate_Web\\affililate_web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{111DE7E8-C4AB-4565-B4A1-F1BE25FBA562}|Affililate_Web\\Affililate_Web.csproj|solutionrelative:affililate_web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{111DE7E8-C4AB-4565-B4A1-F1BE25FBA562}|Affililate_Web\\Affililate_Web.csproj|D:\\HK8\\DoAnThucTap\\Affililate_Web\\affililate_web\\css\\detail.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{111DE7E8-C4AB-4565-B4A1-F1BE25FBA562}|Affililate_Web\\Affililate_Web.csproj|solutionrelative:affililate_web\\css\\detail.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{111DE7E8-C4AB-4565-B4A1-F1BE25FBA562}|Affililate_Web\\Affililate_Web.csproj|D:\\HK8\\DoAnThucTap\\Affililate_Web\\affililate_web\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{111DE7E8-C4AB-4565-B4A1-F1BE25FBA562}|Affililate_Web\\Affililate_Web.csproj|solutionrelative:affililate_web\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,41 +38,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\HK8\\DoAnThucTap\\Affililate_Web\\Affililate_Web\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Affililate_Web\\Views\\Home\\Index.cshtml",
-              "ToolTip": "D:\\HK8\\DoAnThucTap\\Affililate_Web\\Affililate_Web\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Affililate_Web\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAJEAAAAAAAAAAAAAAJUAAAAGAAAAAAAAAA==",
+              "DocumentMoniker": "D:\\HK8\\DoAnThucTap\\Affililate_Web\\Affililate_Web\\Views\\Product\\Index.cshtml",
+              "RelativeDocumentMoniker": "Affililate_Web\\Views\\Product\\Index.cshtml",
+              "ToolTip": "D:\\HK8\\DoAnThucTap\\Affililate_Web\\Affililate_Web\\Views\\Product\\Index.cshtml",
+              "RelativeToolTip": "Affililate_Web\\Views\\Product\\Index.cshtml",
+              "ViewState": "AgIAADQAAAAAAAAAAAAqwDkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-04T18:26:21.877Z",
+              "WhenOpened": "2024-12-17T06:22:30.82Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\HK8\\DoAnThucTap\\Affililate_Web\\Affililate_Web\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Affililate_Web\\Controllers\\HomeController.cs",
-              "ToolTip": "D:\\HK8\\DoAnThucTap\\Affililate_Web\\Affililate_Web\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Affililate_Web\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T18:22:00.257Z",
+              "Title": "detail.css",
+              "DocumentMoniker": "D:\\HK8\\DoAnThucTap\\Affililate_Web\\Affililate_Web\\css\\detail.css",
+              "RelativeDocumentMoniker": "Affililate_Web\\css\\detail.css",
+              "ToolTip": "D:\\HK8\\DoAnThucTap\\Affililate_Web\\Affililate_Web\\css\\detail.css",
+              "RelativeToolTip": "Affililate_Web\\css\\detail.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-17T05:39:49.065Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "detail.cshtml",
+              "DocumentMoniker": "D:\\HK8\\DoAnThucTap\\Affililate_Web\\Affililate_Web\\Views\\Product\\detail.cshtml",
+              "RelativeDocumentMoniker": "Affililate_Web\\Views\\Product\\detail.cshtml",
+              "ToolTip": "D:\\HK8\\DoAnThucTap\\Affililate_Web\\Affililate_Web\\Views\\Product\\detail.cshtml",
+              "RelativeToolTip": "Affililate_Web\\Views\\Product\\detail.cshtml",
+              "ViewState": "AgIAADcAAAAAAAAAAAAkwDwAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-17T05:39:25.227Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "home.css",
-              "DocumentMoniker": "D:\\HK8\\DoAnThucTap\\Affililate_Web\\Affililate_Web\\css\\home.css",
-              "RelativeDocumentMoniker": "Affililate_Web\\css\\home.css",
-              "ToolTip": "D:\\HK8\\DoAnThucTap\\Affililate_Web\\Affililate_Web\\css\\home.css",
-              "RelativeToolTip": "Affililate_Web\\css\\home.css",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAmwEQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-03T18:18:58.512Z",
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "D:\\HK8\\DoAnThucTap\\Affililate_Web\\Affililate_Web\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "Affililate_Web\\Controllers\\ProductController.cs",
+              "ToolTip": "D:\\HK8\\DoAnThucTap\\Affililate_Web\\Affililate_Web\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "Affililate_Web\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAAADYAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T17:52:15.794Z",
               "EditorCaption": ""
             }
           ]

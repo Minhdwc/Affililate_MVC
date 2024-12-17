@@ -83,3 +83,7 @@ D:\HK8\DoAnThucTap\Affililate_Web\Affililate_Web\bin\EntityFramework.SqlServer.d
 D:\HK8\DoAnThucTap\Affililate_Web\Affililate_Web\bin\CloudinaryDotNet.xml
 D:\HK8\DoAnThucTap\Affililate_Web\Affililate_Web\bin\EntityFramework.xml
 D:\HK8\DoAnThucTap\Affililate_Web\Affililate_Web\bin\EntityFramework.SqlServer.xml
+D:\HK8\DoAnThucTap\Affililate_Web\Affililate_Web\bin\PagedList.dll
+D:\HK8\DoAnThucTap\Affililate_Web\Affililate_Web\bin\PagedList.Mvc.dll
+D:\HK8\DoAnThucTap\Affililate_Web\Affililate_Web\bin\PagedList.xml
+D:\HK8\DoAnThucTap\Affililate_Web\Affililate_Web\bin\PagedList.Mvc.xml
